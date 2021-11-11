@@ -51,7 +51,7 @@ public class MainDrive {
 		Scanner myScanner = new Scanner(System.in);
 
 		while (true) {
-			System.out.println("3자리 정수");
+			System.out.println("3자리 정수 입력하세요");
 			int inputNum = myScanner.nextInt();
 
 //			123 => [1,2,3] => 배열 형태로 분리하자 => 문제 배열과 비교하기 편해짐
@@ -95,7 +95,16 @@ public class MainDrive {
 					}
 				}
 			}
-
+			
+//			?S ?B인지 각각의 변수에 들어가 있음 
+			System.out.println(strikeCount+"S/"+ballCount+"B 입니다.");
+			
+//			3S 라면? 정답 맞췄다 -> 탈출
+			
+			if(strikeCount==3) {
+				System.out.println("정답을 맞췄습니다.");
+				break;
+			}
 		}
 
 	}
