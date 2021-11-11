@@ -1,5 +1,7 @@
 package codes;
 
+import java.util.Scanner;
+
 public class MainDrive {
 
 	public static void main(String[] args) {
@@ -44,7 +46,33 @@ public class MainDrive {
 		for(int cpuNum : cpuNumbers) {
 			System.out.println(cpuNum);
 		}
+		
+//		실제 사용자에게 3자리 숫자를 입력 받자( 3S를 맞출때 가지 계속)
 
+		Scanner myScanner = new Scanner(System.in);
+		
+		while(true) {
+			System.out.println("3자리 정수");
+			int inputNum = myScanner.nextInt();
+			
+//			123 => [1,2,3] => 배열 형태로 분리하자 => 문제 배열과 비교하기 편해짐
+			
+			int[]userNumbers = new int[3];
+			
+//			userNumbers[0] = 입력한 숫자의 100의 자리
+			
+			userNumbers[0]= inputNum/100;
+			
+//			userNumbers[1] = 입력한 숫자의 10의 자리
+			
+			userNumbers[1]=  inputNum/10 % 10; 
+			
+//			userNumbers[2] = 입력한 숫자의 1의 자리
+			
+			userNumbers[2] = inputNum%10;
+			
+		}
+		
 	}
 
 }
