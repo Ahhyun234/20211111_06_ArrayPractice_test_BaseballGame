@@ -50,9 +50,14 @@ public class MainDrive {
 
 		Scanner myScanner = new Scanner(System.in);
 
+//		정답 입력 시도를 기록하기 위한 변수 만들기
+		int tryCount =0;
+		
+		
 		while (true) {
 			System.out.println("3자리 정수 입력하세요");
 			int inputNum = myScanner.nextInt();
+			tryCount++;
 
 //			123 => [1,2,3] => 배열 형태로 분리하자 => 문제 배열과 비교하기 편해짐
 
@@ -103,6 +108,7 @@ public class MainDrive {
 			
 			if(strikeCount==3) {
 				System.out.println("정답을 맞췄습니다.");
+				System.out.println(tryCount+"시도 만에 맞췄습니다.");
 				break;
 			}
 		}
